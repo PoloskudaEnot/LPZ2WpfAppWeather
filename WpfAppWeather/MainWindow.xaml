@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppWeather.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppWeather"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="TextBlockResponse" Width="800" Height="150" Background="WhiteSmoke" TextWrapping="Wrap" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBox x:Name="TextBoxCity" Width="125" Height="25"/>
+            <Button x:Name="ButtonEmptyCity" Width="125" Height="25" Content="Запрос" Click="ButtonEmptyCity_Click"/>
+            <Label x:Name="LabelClouds"/>
+            <Label x:Name="LabelPressure"/>
+            <Label x:Name="LabelSpeed"/>
+            <Label x:Name="LabelTemp"/>
+            <Label x:Name="LabelTempMin"/>
+            <Label x:Name="LabelTexmpMax"/>
+        </StackPanel>
+        <StackPanel Background="Beige" Grid.Column="1" Grid.Row="1">
+            <Image x:Name="ImageIconWeather" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Window>
